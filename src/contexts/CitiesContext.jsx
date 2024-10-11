@@ -38,6 +38,25 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      setCities((cities) => [...cities, data]);
+    } catch {
+      alert("There was an error while fetching data...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   function getFlag(flag) {
     if (flag === undefined) return;
 
@@ -45,6 +64,8 @@ function CitiesProvider({ children }) {
       flag = flag.toLowerCase();
       return <img src={`https://flagcdn.com/24x18/${flag}.png`} alt="flag" />;
     }
+
+    // Retirar o código de conversão de emoji mais tarde
 
     let countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
       .map((char) => String.fromCharCode(char - 127397).toLowerCase())
@@ -57,7 +78,7 @@ function CitiesProvider({ children }) {
 
   return (
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCity, getFlag }}
+      value={{ cities, isLoading, currentCity, getCity, getFlag, createCity }}
     >
       {children}
     </CitiesContext.Provider>

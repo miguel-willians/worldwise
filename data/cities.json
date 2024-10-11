@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,55 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "971d",
+      "cityName": "Akabli",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "date": "2024-10-11T15:24:24.985Z",
+      "notes": "",
+      "position": {
+        "lat": "26.58852714730864",
+        "lng": "1.0546875000000002"
+      }
+    },
+    {
+      "id": "5b75",
+      "cityName": "Senouillac",
+      "country": "France",
+      "countryCode": "FR",
+      "date": "2024-10-11T15:26:48.297Z",
+      "notes": "",
+      "position": {
+        "lat": "43.94537239244211",
+        "lng": "1.9555664062500002"
+      }
+    },
+    {
+      "id": "20a0",
+      "cityName": "Ormoy",
+      "country": "France",
+      "countryCode": "FR",
+      "date": "2024-10-11T15:27:39.032Z",
+      "notes": "",
+      "position": {
+        "lat": "47.931066347509784",
+        "lng": "3.5815429687500004"
+      }
+    },
+    {
+      "id": "33d1",
+      "cityName": "Westerlo",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "date": "2024-10-11T15:27:45.342Z",
+      "notes": "",
+      "position": {
+        "lat": "51.09662294502995",
+        "lng": "4.921875000000001"
+      }
     }
   ]
 }

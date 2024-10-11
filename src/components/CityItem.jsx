@@ -11,7 +11,8 @@ const formatDate = (date) =>
 
 function CityItem({ city }) {
   const { getFlag, currentCity } = useCities();
-  const { cityName, emoji, date, id, position } = city;
+  // Retirar o emoji da destrturação
+  const { cityName, emoji, countryCode, date, id, position } = city;
 
   return (
     <li>
@@ -21,7 +22,8 @@ function CityItem({ city }) {
         }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
-        <span className={styles.emoji}>{getFlag(emoji)}</span>
+        {/* Arrumar essa renderização depois */}
+        <span className={styles.emoji}>{getFlag(emoji || countryCode)}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
         <button className={styles.deleteBtn}>&times;</button>
