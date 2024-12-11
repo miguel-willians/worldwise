@@ -23,7 +23,8 @@ function City() {
     function () {
       getCity(id);
     },
-    [id]
+    //UseEffect é executado cada vez que um valor do dependency array é modificado. Quando um componente é re-renderizado as funções são "recriadas" o que pode ocasionar em um loop infinito. Para evitar isso, recomenda-se o uso do useCallback (usado para funções) ou o useMemo (usado para objetos).
+    [id, getCity]
   );
 
   if (isLoading) return <Spinner />;
