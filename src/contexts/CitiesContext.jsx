@@ -60,7 +60,7 @@ function reducer(state, action) {
 }
 
 function CitiesProvider({ children }) {
-  const BASE_URL = "http://localhost:9000";
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
     initialState
@@ -69,25 +69,27 @@ function CitiesProvider({ children }) {
   // const [isLoading, setIsLoading] = useState(false);
   // const [currentCity, setCurrentCity] = useState({});
 
-  useEffect(function () {
-    async function fetchCities() {
-      dispatch({ type: "loading" });
-      try {
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        dispatch({ type: "cities/loaded", payload: data });
-      } catch {
-        dispatch({
-          type: "rejected",
-          payload: "There was an error while loading cities...",
-        });
+  useEffect(
+    function () {
+      async function fetchCities() {
+        dispatch({ type: "loading" });
+        try {
+          const res = await fetch(`${BASE_URL}/cities`);
+          const data = await res.json();
+          dispatch({ type: "cities/loaded", payload: data });
+        } catch {
+          dispatch({
+            type: "rejected",
+            payload: "There was an error while loading cities...",
+          });
+        }
       }
-    }
-    fetchCities();
-  }, []);
+      fetchCities();
+    },
+    [BASE_URL]
+  );
 
-
-  // useCallback(função, dependency array) --> Memoiza a função, fazendo com que ela seja re-executada somente quando há uma alteração de parâmetro e não por causa de um re-render. 
+  // useCallback(função, dependency array) --> Memoiza a função, fazendo com que ela seja re-executada somente quando há uma alteração de parâmetro e não por causa de um re-render.
   const getCity = useCallback(
     async function getCity(id) {
       if (Number(id) === currentCity.id) return;
@@ -96,6 +98,7 @@ function CitiesProvider({ children }) {
       try {
         const res = await fetch(`${BASE_URL}/cities/${id}`);
         const data = await res.json();
+        console.log(data);
         dispatch({ type: "city/loaded", payload: data });
       } catch {
         dispatch({
@@ -104,7 +107,7 @@ function CitiesProvider({ children }) {
         });
       }
     },
-    [currentCity.id]
+    [currentCity.id, BASE_URL]
   );
 
   async function createCity(newCity) {
@@ -119,6 +122,7 @@ function CitiesProvider({ children }) {
         },
       });
       const data = await res.json();
+      console.log(newCity);
       dispatch({ type: "city/created", payload: data });
     } catch {
       dispatch({

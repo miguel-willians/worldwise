@@ -4,8 +4,6 @@ import styles from "./CountryItem.module.css";
 function CountryItem({ country }) {
   const { getFlag } = useCities();
 
-  console.log(country);
-
   return (
     <li className={styles.countryItem}>
       {/* Arrumar essa renderização depois */}

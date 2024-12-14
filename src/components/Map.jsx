@@ -63,7 +63,7 @@ function Map() {
             key={city.id}
           >
             <Popup>
-              <span>{getFlag(city.emoji)}</span>
+              <span>{getFlag(city.countryCode)}</span>
               <span>{city.cityName}</span>
             </Popup>
           </Marker>
