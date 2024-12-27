@@ -23,7 +23,7 @@ Você pode acessar o site [aqui](https://worldwise-5zic.onrender.com).
 - **CSS Modules**: Técnica para modularizar o CSS, garantindo que os estilos sejam aplicados apenas aos componentes específicos, evitando conflitos de classe e promovendo a reutilização e manutenção de estilos.
 
   
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas:
 
 ### Frontend
 
@@ -42,6 +42,8 @@ Você pode acessar o repositório do backend [aqui](https://github.com/miguel-wi
 ### Banco de Dados
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+
+---
 
 # Worldwise 🇺🇸
 
