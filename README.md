@@ -1,6 +1,6 @@
 # Worldwise 🇧🇷
 
-Worldwise é uma aplicação desktop SPA (Single Page Application ou Aplicação de Página Única) construída para ajudar usuários a explorar o mundo, permitindo que mantenham avaliações de lugares que visitaram e escrevam reviews sobre suas experiências.
+Worldwise é meu primeiro projeto fullstack que simula uma aplicação desktop SPA (Single Page Application ou Aplicação de Página Única). Foi construída para ajudar usuários a explorar o mundo, permitindo que mantenham marcações de lugares que visitaram e escrevam anotações sobre suas experiências.
 
 Você pode acessar o site [aqui](https://worldwise-5zic.onrender.com).
 
@@ -47,7 +47,7 @@ Você pode acessar o repositório do backend [aqui](https://github.com/miguel-wi
 
 # Worldwise 🇺🇸
 
-Worldwise is a desktop SPA (Single Page Application) built to help users explore the world, allowing them to keep reviews of places they've visited and write reviews about their experiences.
+Worldwise is my first full-stack project that simulates a desktop SPA (Single Page Application). It was built to help users explore the world by allowing them to keep track of places they've visited and write notes about their experiences.
 
 You can access the site [here](https://worldwise-5zic.onrender.com).
 
